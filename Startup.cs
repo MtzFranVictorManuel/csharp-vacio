@@ -6,7 +6,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
+using SoapCore;
 
 namespace csharp_vacio
 {
@@ -16,6 +18,9 @@ namespace csharp_vacio
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSoapCore();
+            services.TryAddSingleton<IConvertir, Convertir>();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -28,12 +33,9 @@ namespace csharp_vacio
 
             app.UseRouting();
 
-            app.UseEndpoints(endpoints =>
+           app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                app.UseSoapEndpoint<IConvertir>("/Convertidor.asmx", new SoapEncoderOptions(), SoapSerializer.XmlSerializer);
             });
         }
     }

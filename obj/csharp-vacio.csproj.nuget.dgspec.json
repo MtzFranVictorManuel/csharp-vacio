@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/app/csharp-vacio/csharp-vacio.csproj": {}
+    "/Users/victormanuel/Documents/Programacion/examenC/Sin título/csharp-vacio/csharp-vacio.csproj": {}
   },
   "projects": {
-    "/app/csharp-vacio/csharp-vacio.csproj": {
+    "/Users/victormanuel/Documents/Programacion/examenC/Sin título/csharp-vacio/csharp-vacio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/app/csharp-vacio/csharp-vacio.csproj",
+        "projectUniqueName": "/Users/victormanuel/Documents/Programacion/examenC/Sin título/csharp-vacio/csharp-vacio.csproj",
         "projectName": "csharp-vacio",
-        "projectPath": "/app/csharp-vacio/csharp-vacio.csproj",
-        "packagesPath": "/root/.nuget/packages/",
-        "outputPath": "/app/csharp-vacio/obj/",
+        "projectPath": "/Users/victormanuel/Documents/Programacion/examenC/Sin título/csharp-vacio/csharp-vacio.csproj",
+        "packagesPath": "/Users/victormanuel/.nuget/packages/",
+        "outputPath": "/Users/victormanuel/Documents/Programacion/examenC/Sin título/csharp-vacio/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/root/.nuget/NuGet/NuGet.Config"
+          "/Users/victormanuel/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -32,21 +32,47 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "SoapCore": {
+              "target": "Package",
+              "version": "[1.1.0.49, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "version": "[5.0.17, 5.0.17]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -55,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.408/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }
